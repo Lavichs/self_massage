@@ -45,8 +45,8 @@ const Menu = () => {
                 <li><Link className={lastSegment === ABOUT_PAGE ? active : baseLink}
                           to={ABOUT_PAGE}
                 >О нас</Link></li>
-                <li><button className='auth'><Link className='authLink' to={LOGIN_PAGE}
-                >Войти</Link></button></li>
+                <li><Link className='authLink' to={LOGIN_PAGE}
+                >Войти</Link></li>
             </ul>
         </>
     );
