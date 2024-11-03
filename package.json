@@ -1,0 +1,26 @@
+{
+  "name": "self_massage",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "cross-env MODE=prod node ./config/build/esbuild-config.js",
+    "build:dev": "cross-env MODE=dev node ./config/build/esbuild-config.js",
+    "start:dev": "node config/build/esbuild-dev.js",
+    "start": "node config/build/esbuild-prod.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "esbuild": "^0.24.0",
+    "esbuild-css-modules-plugin": "^3.1.2"
+  },
+  "dependencies": {
+    "@pbe/react-yandex-maps": "^1.2.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.27.0"
+  }
+}

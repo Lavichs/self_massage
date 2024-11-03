@@ -1,0 +1,26 @@
+.about {
+    /*margin-top: 120px;*/
+    margin: 0 5%;
+    /*background-color: #fffffc;*/
+    /*background-color: #FFF8E1;*/
+    border-radius: 20px;
+    /*display: flex;*/
+}
+
+.about h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    user-select: none;
+}
+
+.about h2 {
+    margin: 20px 0;
+}
+
+.about p {
+    margin: 10px 0;
+}
+
+.about ul {
+    margin-left: 40px;
+}
