@@ -1,24 +1,33 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from '../styles/auth.module.css'
 
 const Authorization = () => {
+    const [name, setName] = useState('');
+    const [pass, setPass] = useState('');
+
+    const auth = (event) => {
+        alert(`${name}, ${pass}`)
+        event.stopPropagation();
+        event.preventDefault();
+    }
+
     return (
         <>
-            <form>
-            {/*    <div className="imgcontainer">*/}
-            {/*        /!*<img src={require('../../resource/img_avatar2.png')} alt="Аватар" className="avatar"/>*!/*/}
-            {/*    </div>*/}
+            <form onSubmit={auth}>
+                <div className={styles.imgcontainer}>
+                    <img src={require('../../resource/img_avatar_men.png')} alt="Аватар" className={styles.avatar}/>
+                </div>
 
                 <div className={styles.container}>
                     <label htmlFor="uname"><b>Пользователь</b></label>
-                    <input type="text" placeholder="Введите имя" name="uname" required/>
+                    <input onChange={e => setName(e.target.value)} type="text" placeholder="Введите имя" name="uname" required/>
 
                     <label htmlFor="psw"><b>Пароль</b></label>
-                    <input type="password" placeholder="Введите пароль" name="psw" required/>
+                    <input onChange={e => setPass(e.target.value)} type="password" placeholder="Введите пароль" name="psw" required/>
 
                     <button type="submit">Вход</button>
                     <label>
-                        <input type="checkbox" checked="checked" name="remember"/> Запомнить меня
+                        <input type="checkbox" name="remember"/> Запомнить меня
                     </label>
                 </div>
 
