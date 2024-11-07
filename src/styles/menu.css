@@ -125,7 +125,7 @@
     cursor: pointer;
     border: #FFDAB9 2px solid;
     border-radius: 10px;
-    background-color: transparent;
+    background-color: #ffeadb;
 
     transition: all 0.3s ease-out;
 }
