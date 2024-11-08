@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import styles from "../../styles/auth.module.css";
+import {BACKEND_API_URL} from "../../consts/env";
 
 const Task2 = () => {
     const [mas1, setMas1] = useState('');
@@ -8,7 +9,7 @@ const Task2 = () => {
     const handleSubmit = async (event) => {
         event.preventDefault(); // Предотвращаем перезагрузку страницы
 
-        const response = await fetch('', {
+        const response = await fetch(BACKEND_API_URL + '/task3', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',

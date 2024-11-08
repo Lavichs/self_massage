@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import styles from '../styles/auth.module.css'
+import {BACKEND_API_URL} from "../consts/env";
 
 const Authorization = () => {
     const [username, setUsername] = useState('');
@@ -7,8 +8,9 @@ const Authorization = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault(); // Предотвращаем перезагрузку страницы
+        console.log(BACKEND_API_URL);
 
-        const response = await fetch('http://216.173.69.252:9000/task2', {
+        const response = await fetch(BACKEND_API_URL + '/task2', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
