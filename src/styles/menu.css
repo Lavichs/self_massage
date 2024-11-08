@@ -12,7 +12,7 @@
 
 @media (min-width: 1020px) {
     .menu li {
-        padding: 0 10px;
+        padding: 0 5px;
     }
 }
 
@@ -131,4 +131,60 @@
 }
 .authLink:hover {
     background-color: #FFDAB9;
+}
+
+
+
+
+.submenu {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    list-style-type: none;
+    background-color: #dcdcf5;
+    border-radius: 10px;
+    padding: 10px 0;
+    animation-name: growDown;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+    transform-origin: top center;
+    border: solid 1px black;
+}
+
+li:hover > .submenu {
+    display: block;
+}
+
+.submenu__item {
+    /*border: solid #b6b5ce 1px;*/
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    min-width: 150px;
+    display: flex;
+}
+
+.submenu__item:hover {
+    background-color: #cfc3d6;
+}
+
+.subMenuLink {
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    transition: all 0.5s ease-out;
+    padding: 15px;
+    border-radius: 20%;
+}
+
+@keyframes growDown {
+    0% {
+        transform: scaleY(0)
+    }
+    80% {
+        transform: scaleY(1.1)
+    }
+    100% {
+        transform: scaleY(1)
+    }
 }

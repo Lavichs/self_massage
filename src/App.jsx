@@ -12,7 +12,7 @@ import {
     ARTICLE_BASE,
     CATALOG_PAGE,
     CONTACTS_PAGE,
-    KNOWLEDGE_PAGE, LOGIN_PAGE,
+    KNOWLEDGE_PAGE, L6_T2, LOGIN_PAGE,
     MAIN_PAGE,
     NOTFOUND_PAGE, TOFFEL_COURSE_PAGE
 } from "./consts/routes";
@@ -22,6 +22,7 @@ import Articles from "./pages/Articles";
 import ScrollToTop from "./Components/ScrollToTop";
 import ToffelCourse from "./pages/ToffelCourse";
 import Authorization from "./pages/Authorization";
+import Task2 from "./Components/l6_tasks/task2";
 
 
 const App = () => {
@@ -61,6 +62,7 @@ const App = () => {
                     <Route path={ARTICLE_BASE + '/:id'} element={<Articles/>} />
                     <Route path={TOFFEL_COURSE_PAGE} element={<ToffelCourse/>} />
                     <Route path={LOGIN_PAGE} element={<Authorization/>} />
+                    <Route path={L6_T2} element={<Task2/>} />
                     <Route path={NOTFOUND_PAGE} element={<NotFound/>}/>
                 </Routes>
             </div>
